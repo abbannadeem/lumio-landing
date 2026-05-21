@@ -18,6 +18,8 @@ No backend — the site builds to fully static files in `./out`, ideal for Cloud
 ## Features
 
 - Fully responsive, mobile-first layout
+- **Light / dark mode** with a toggle — auto-detects the system preference and persists the choice in `localStorage`, with no flash of the wrong theme (theme is set before first paint)
+- **Scroll progress bar** at the top of the page and a **back-to-top** button
 - Sticky navbar with an accessible, keyboard-navigable mobile menu
 - Hero with a CSS/SVG dashboard mockup (no images → crisp + fast)
 - Sections: Features, How it works, Pricing, Testimonials, FAQ accordion, CTA, Footer
