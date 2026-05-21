@@ -1,0 +1,48 @@
+# Lumio
+
+> Lumio is an AI-powered analytics platform that turns raw business data into clear, automated decisions. It connects your data sources, uses AI to surface insights and anomalies, and delivers automated reports so teams can make faster, data-driven decisions without a dedicated data team.
+
+Lumio is built for product, growth, operations, and analytics teams who want the value of a data team without the overhead. The platform emphasizes speed to insight (set up in under an hour), automation (scheduled reports and AI alerts), and plain-language explanations of what the data means.
+
+## What Lumio does
+
+- **Real-time Analytics**: Live dashboards that update the moment data changes — no manual refresh.
+- **AI Insights**: Machine learning models detect trends, anomalies, and opportunities, then explain them in plain language.
+- **Automated Reports**: Scheduled, polished reports delivered to email or Slack.
+- **Team Collaboration**: Shared dashboards, comments, and a single source of truth for the whole team.
+- **Custom Dashboards**: Drag-and-drop widgets so each team builds the view it needs.
+- **Data Security**: Encryption in transit and at rest, SSO, granular access controls, and SOC 2-ready infrastructure.
+
+## How it works
+
+1. **Connect your data** — Integrate databases, spreadsheets, and 200+ tools (PostgreSQL, MySQL, BigQuery, Snowflake, Stripe, Google Analytics, HubSpot, Salesforce) in minutes. No engineering required.
+2. **AI analyzes** — Lumio cleans, models, and continuously scans the data to surface the patterns and risks that matter.
+3. **Get decisions** — Receive clear, prioritized recommendations and automated reports the whole team can act on.
+
+## Pricing
+
+- **Starter — $29/month**: Up to 5 data sources, real-time dashboards, weekly AI insights, email reports, 2 team members.
+- **Pro — $79/month** (most popular): Unlimited data sources, custom dashboards, daily AI insights and alerts, automated Slack and email reports, up to 20 team members, priority support.
+- **Enterprise — custom pricing**: Everything in Pro plus SSO and SCIM provisioning, SOC 2 and custom DPA, dedicated success manager, unlimited team members, and a 99.9% uptime SLA.
+
+All paid plans include a 14-day free trial with no credit card required. Plans can be upgraded, downgraded, or cancelled at any time.
+
+## Frequently asked questions
+
+- **Setup time**: Most teams are running in under an hour; no engineering or data team needed.
+- **Data sources**: 200+ integrations out of the box, plus spreadsheet upload and a custom API.
+- **Security**: Encrypted in transit and at rest, SSO, granular access controls, SOC 2-standard infrastructure; Enterprise adds a custom DPA.
+- **Free trial**: 14 days, full Pro access, no credit card required.
+- **Plan changes**: Upgrade, downgrade, or cancel anytime from account settings; changes are prorated.
+
+## Key facts
+
+- Category: AI analytics / business intelligence (BI) SaaS
+- Platforms: Web, iOS, Android
+- Best for: product, growth, operations, and analytics teams
+- Differentiators: plain-language AI insights, fast setup, automated reporting, real-time dashboards
+
+## Contact
+
+- Website: https://lumio-landing.pages.dev
+- Email: hello@lumio.ai
