@@ -31,22 +31,22 @@ export function DashboardMockup() {
   return (
     <div
       aria-hidden="true"
-      className="relative w-full select-none rounded-2xl border border-slate-200 bg-white shadow-card"
+      className="relative w-full select-none rounded-2xl border border-slate-200 bg-white shadow-card dark:border-slate-800 dark:bg-slate-900"
     >
       {/* Window chrome */}
-      <div className="flex items-center gap-2 border-b border-slate-100 px-4 py-3">
+      <div className="flex items-center gap-2 border-b border-slate-100 px-4 py-3 dark:border-slate-800">
         <span className="h-3 w-3 rounded-full bg-rose-300" />
         <span className="h-3 w-3 rounded-full bg-amber-300" />
         <span className="h-3 w-3 rounded-full bg-emerald-300" />
-        <div className="ml-3 hidden h-5 flex-1 rounded-md bg-slate-100 sm:block" />
+        <div className="ml-3 hidden h-5 flex-1 rounded-md bg-slate-100 dark:bg-slate-800 sm:block" />
       </div>
 
       <div className="flex">
         {/* Sidebar */}
-        <aside className="hidden w-40 shrink-0 flex-col gap-1 border-r border-slate-100 p-3 sm:flex">
+        <aside className="hidden w-40 shrink-0 flex-col gap-1 border-r border-slate-100 p-3 dark:border-slate-800 sm:flex">
           <div className="mb-2 flex items-center gap-2 px-2 py-1">
             <span className="h-6 w-6 rounded-md bg-brand-gradient" />
-            <span className="h-3 w-16 rounded bg-slate-200" />
+            <span className="h-3 w-16 rounded bg-slate-200 dark:bg-slate-700" />
           </div>
           {[
             { icon: LayoutGrid, active: true, w: "w-20" },
@@ -58,13 +58,15 @@ export function DashboardMockup() {
             <div
               key={i}
               className={`flex items-center gap-2 rounded-lg px-2 py-2 ${
-                active ? "bg-brand-50 text-brand-700" : "text-slate-400"
+                active
+                  ? "bg-brand-50 text-brand-700 dark:bg-brand-500/15 dark:text-brand-300"
+                  : "text-slate-400 dark:text-slate-500"
               }`}
             >
               <Icon size={16} />
               <span
                 className={`h-2.5 rounded ${w} ${
-                  active ? "bg-brand-200" : "bg-slate-200"
+                  active ? "bg-brand-200" : "bg-slate-200 dark:bg-slate-700"
                 }`}
               />
             </div>
@@ -78,15 +80,15 @@ export function DashboardMockup() {
             {statCards.map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl border border-slate-100 bg-slate-50/60 p-3"
+                className="rounded-xl border border-slate-100 bg-slate-50/60 p-3 dark:border-slate-800 dark:bg-slate-800/40"
               >
                 <p className="text-[10px] font-medium text-slate-400">
                   {s.label}
                 </p>
-                <p className="mt-1 text-sm font-bold text-slate-800 sm:text-base">
+                <p className="mt-1 text-sm font-bold text-slate-800 dark:text-slate-100 sm:text-base">
                   {s.value}
                 </p>
-                <span className="mt-1 inline-flex items-center gap-0.5 text-[10px] font-semibold text-emerald-600">
+                <span className="mt-1 inline-flex items-center gap-0.5 text-[10px] font-semibold text-emerald-600 dark:text-emerald-400">
                   <ArrowUpRight size={10} />
                   {s.delta}
                 </span>
@@ -95,12 +97,12 @@ export function DashboardMockup() {
           </div>
 
           {/* Bar chart */}
-          <div className="rounded-xl border border-slate-100 p-4">
+          <div className="rounded-xl border border-slate-100 p-4 dark:border-slate-800">
             <div className="mb-3 flex items-center justify-between">
-              <span className="text-xs font-semibold text-slate-700">
+              <span className="text-xs font-semibold text-slate-700 dark:text-slate-200">
                 Weekly performance
               </span>
-              <span className="rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-semibold text-brand-700">
+              <span className="rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-semibold text-brand-700 dark:bg-brand-500/15 dark:text-brand-300">
                 Live
               </span>
             </div>
@@ -125,7 +127,7 @@ export function DashboardMockup() {
             </div>
             <div className="mt-2 flex justify-between">
               {weekdays.map((d, i) => (
-                <span key={i} className="text-[9px] text-slate-300">
+                <span key={i} className="text-[9px] text-slate-300 dark:text-slate-600">
                   {d}
                 </span>
               ))}
@@ -133,12 +135,12 @@ export function DashboardMockup() {
           </div>
 
           {/* AI insight callout */}
-          <div className="flex items-start gap-3 rounded-xl border border-brand-100 bg-brand-50/70 p-3">
+          <div className="flex items-start gap-3 rounded-xl border border-brand-100 bg-brand-50/70 p-3 dark:border-brand-500/20 dark:bg-brand-500/10">
             <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-brand-gradient text-white">
               <TrendingUp size={13} />
             </span>
             <div className="space-y-1.5">
-              <p className="text-[11px] font-semibold text-brand-800">
+              <p className="text-[11px] font-semibold text-brand-800 dark:text-brand-300">
                 AI insight
               </p>
               <div className="h-2 w-40 rounded bg-brand-200/70" />
@@ -150,12 +152,12 @@ export function DashboardMockup() {
 
       {/* Floating accent card */}
       <motion.div
-        className="absolute -bottom-5 -right-3 hidden rounded-xl border border-slate-100 bg-white p-3 shadow-card sm:block"
+        className="absolute -bottom-5 -right-3 hidden rounded-xl border border-slate-100 bg-white p-3 shadow-card dark:border-slate-800 dark:bg-slate-900 sm:block"
         animate={reduceMotion ? undefined : { y: [0, -8, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
         <p className="text-[10px] font-medium text-slate-400">Forecast</p>
-        <p className="text-sm font-bold text-emerald-600">▲ 24% growth</p>
+        <p className="text-sm font-bold text-emerald-600 dark:text-emerald-400">▲ 24% growth</p>
       </motion.div>
     </div>
   );

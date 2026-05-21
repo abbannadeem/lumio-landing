@@ -46,7 +46,7 @@ export function Logo({ variant = "default", className = "" }: LogoProps) {
       </svg>
       <span
         className={`font-display text-xl font-extrabold tracking-tight ${
-          variant === "light" ? "text-white" : "text-slate-900"
+          variant === "light" ? "text-white" : "text-slate-900 dark:text-white"
         }`}
       >
         {siteConfig.name}

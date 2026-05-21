@@ -45,18 +45,18 @@ export function Testimonials() {
   return (
     <section
       aria-labelledby="testimonials-heading"
-      className="bg-slate-50 py-20 sm:py-28"
+      className="bg-slate-50 py-20 dark:bg-slate-900 sm:py-28"
     >
       <div className="container-page">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">Testimonials</span>
           <h2
             id="testimonials-heading"
-            className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+            className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl"
           >
             Loved by data-driven teams
           </h2>
-          <p className="mt-4 text-base text-slate-600 sm:text-lg">
+          <p className="mt-4 text-base text-slate-600 dark:text-slate-300 sm:text-lg">
             Thousands of teams use Lumio to make faster, smarter decisions every
             day.
           </p>
@@ -65,7 +65,7 @@ export function Testimonials() {
         <ul className="mt-14 grid gap-6 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <Reveal as="li" key={t.name} delay={i * 0.08}>
-              <figure className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-card">
+              <figure className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-card dark:border-slate-800 dark:bg-slate-800">
                 <div className="flex gap-0.5" aria-label="Rated 5 out of 5 stars">
                   {Array.from({ length: 5 }).map((_, s) => (
                     <Star
@@ -76,7 +76,7 @@ export function Testimonials() {
                     />
                   ))}
                 </div>
-                <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-700">
+                <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
                   “{t.quote}”
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3">
@@ -87,10 +87,10 @@ export function Testimonials() {
                     {t.initials}
                   </span>
                   <span>
-                    <span className="block text-sm font-semibold text-slate-900">
+                    <span className="block text-sm font-semibold text-slate-900 dark:text-white">
                       {t.name}
                     </span>
-                    <span className="block text-xs text-slate-500">
+                    <span className="block text-xs text-slate-500 dark:text-slate-400">
                       {t.role}, {t.company}
                     </span>
                   </span>

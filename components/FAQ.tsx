@@ -47,7 +47,7 @@ function FaqItem({
   id: string;
 }) {
   return (
-    <div className="border-b border-slate-200">
+    <div className="border-b border-slate-200 dark:border-slate-800">
       <h3>
         <button
           type="button"
@@ -57,7 +57,7 @@ function FaqItem({
           id={`${id}-button`}
           className="flex w-full items-center justify-between gap-4 rounded-lg py-5 text-left"
         >
-          <span className="font-display text-base font-semibold text-slate-900 sm:text-lg">
+          <span className="font-display text-base font-semibold text-slate-900 dark:text-white sm:text-lg">
             {faq.question}
           </span>
           <ChevronDown
@@ -81,7 +81,7 @@ function FaqItem({
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="pb-5 pr-8 text-sm leading-relaxed text-slate-600">
+            <p className="pb-5 pr-8 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
               {faq.answer}
             </p>
           </motion.div>
@@ -99,14 +99,14 @@ export function FAQ() {
       <div className="container-page max-w-3xl">
         <Reveal className="text-center">
           <span className="eyebrow">FAQ</span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Frequently asked questions
           </h2>
-          <p className="mt-4 text-base text-slate-600 sm:text-lg">
+          <p className="mt-4 text-base text-slate-600 dark:text-slate-300 sm:text-lg">
             Everything you need to know about Lumio. Can&apos;t find an answer?{" "}
             <a
               href="#cta"
-              className="font-semibold text-brand-700 underline-offset-4 hover:underline"
+              className="font-semibold text-brand-700 underline-offset-4 hover:underline dark:text-brand-300"
             >
               Get in touch
             </a>

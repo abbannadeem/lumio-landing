@@ -32,15 +32,15 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="scroll-mt-20 bg-slate-50 py-20 sm:py-28"
+      className="scroll-mt-20 bg-slate-50 py-20 dark:bg-slate-900 sm:py-28"
     >
       <div className="container-page">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">How it works</span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             From raw data to decisions in three steps
           </h2>
-          <p className="mt-4 text-base text-slate-600 sm:text-lg">
+          <p className="mt-4 text-base text-slate-600 dark:text-slate-300 sm:text-lg">
             Get up and running in an afternoon — no data team required.
           </p>
         </Reveal>
@@ -56,14 +56,14 @@ export function HowItWorks() {
               <div className="flex flex-col items-center text-center">
                 <span className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-gradient text-white shadow-glow">
                   <step.icon size={24} aria-hidden="true" />
-                  <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-white text-xs font-bold text-brand-700 shadow">
+                  <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-white text-xs font-bold text-brand-700 shadow dark:border-slate-900 dark:bg-slate-800 dark:text-brand-300">
                     {i + 1}
                   </span>
                 </span>
-                <h3 className="mt-5 font-display text-xl font-bold text-slate-900">
+                <h3 className="mt-5 font-display text-xl font-bold text-slate-900 dark:text-white">
                   {step.title}
                 </h3>
-                <p className="mt-2 max-w-xs text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 max-w-xs text-sm leading-relaxed text-slate-600 dark:text-slate-400">
                   {step.description}
                 </p>
               </div>

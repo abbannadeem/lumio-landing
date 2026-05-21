@@ -27,7 +27,7 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
       >
-        <div className="absolute left-1/2 top-0 h-[520px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-brand-200/40 via-accent-400/20 to-transparent blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-[520px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-brand-200/40 via-accent-400/20 to-transparent blur-3xl dark:from-brand-500/25 dark:via-accent-500/15" />
         <div
           className="absolute inset-0 opacity-[0.4]"
           style={{
@@ -56,7 +56,7 @@ export function Hero() {
           <motion.h1
             variants={item}
             id="hero-heading"
-            className="mt-5 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
+            className="mt-5 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl"
           >
             Turn raw data into{" "}
             <span className="text-gradient">decisions</span> — automatically
@@ -64,7 +64,7 @@ export function Hero() {
 
           <motion.p
             variants={item}
-            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0"
+            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg lg:mx-0"
           >
             Lumio connects your business data, surfaces AI-driven insights, and
             delivers automated reports — so your team spends less time digging
@@ -87,7 +87,7 @@ export function Hero() {
 
           <motion.p
             variants={item}
-            className="mt-5 text-xs text-slate-400"
+            className="mt-5 text-xs text-slate-400 dark:text-slate-500"
           >
             No credit card required · 14-day free trial · Cancel anytime
           </motion.p>

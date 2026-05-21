@@ -142,8 +142,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${sora.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${sora.variable}`}
+      // The theme script mutates the class before hydration → silence the mismatch.
+      suppressHydrationWarning
+    >
       <head>
+        {/* Set the theme before first paint to avoid a flash of the wrong theme. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);}catch(e){}})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           // JSON-LD is static, trusted data — safe to inject.
