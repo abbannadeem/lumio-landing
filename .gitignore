@@ -38,3 +38,6 @@ next-env.d.ts
 .claude
 .vscode
 .idea
+
+# local preview helper (not part of the project)
+preview-server.mjs
