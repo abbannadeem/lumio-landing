@@ -8,10 +8,13 @@ import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { BackToTop } from "@/components/ui/BackToTop";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <Navbar />
       <main id="main">
         <Hero />
@@ -24,6 +27,7 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }
