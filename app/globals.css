@@ -13,11 +13,14 @@
     /* Offset anchored scroll for the sticky navbar height. */
     scroll-padding-top: 5rem;
     -webkit-text-size-adjust: 100%;
+    /* Guard against any single element leaking past the viewport on mobile. */
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-white text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
 
   /* Respect users who prefer reduced motion. */
