@@ -56,7 +56,7 @@ export function Hero() {
           <motion.h1
             variants={item}
             id="hero-heading"
-            className="mt-5 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl"
+            className="mt-5 break-words font-display text-[clamp(1.75rem,8vw,2.25rem)] font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl"
           >
             Turn raw data into{" "}
             <span className="text-gradient">decisions</span> — automatically

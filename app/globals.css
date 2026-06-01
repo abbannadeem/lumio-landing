@@ -14,13 +14,20 @@
     scroll-padding-top: 5rem;
     -webkit-text-size-adjust: 100%;
     /* Guard against any single element leaking past the viewport on mobile. */
-    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100vw;
   }
 
   body {
     @apply bg-white text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+
+  /* Prevent any single long word/string from blowing out the layout on mobile. */
+  h1, h2, h3, h4, h5, h6, p {
+    overflow-wrap: break-word;
   }
 
   /* Respect users who prefer reduced motion. */
