@@ -38,15 +38,15 @@ export function Hero() {
         />
       </div>
 
-      <div className="container-page grid items-center gap-12 pb-16 lg:grid-cols-2 lg:gap-8 lg:pb-24">
-        {/* Copy */}
+      <div className="container-page flex flex-col items-center gap-12 pb-16 lg:gap-16 lg:pb-24">
+        {/* Copy — always centered */}
         <motion.div
           variants={container}
           initial="hidden"
           animate="visible"
-          className="text-center lg:text-left"
+          className="mx-auto max-w-3xl text-center"
         >
-          <motion.div variants={item} className="flex justify-center lg:justify-start">
+          <motion.div variants={item} className="flex justify-center">
             <span className="eyebrow">
               <Sparkles size={13} />
               AI-powered analytics
@@ -64,7 +64,7 @@ export function Hero() {
 
           <motion.p
             variants={item}
-            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg lg:mx-0"
+            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg"
           >
             Lumio connects your business data, surfaces AI-driven insights, and
             delivers automated reports — so your team spends less time digging
@@ -73,7 +73,7 @@ export function Hero() {
 
           <motion.div
             variants={item}
-            className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start"
+            className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
             <a href="#cta" className="btn-primary w-full sm:w-auto">
               Start free trial
@@ -93,12 +93,12 @@ export function Hero() {
           </motion.p>
         </motion.div>
 
-        {/* Visual */}
+        {/* Visual — centered below the copy */}
         <motion.div
           initial={{ opacity: 0, y: reduceMotion ? 0 : 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="relative"
+          className="relative w-full max-w-5xl"
         >
           <DashboardMockup />
         </motion.div>
