@@ -99,7 +99,7 @@ export function FAQ() {
       <div className="container-page max-w-3xl">
         <Reveal className="text-center">
           <span className="eyebrow">FAQ</span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          <h2 className="mt-4 font-display text-[clamp(1.5rem,7vw,1.875rem)] font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Frequently asked questions
           </h2>
           <p className="mt-4 text-base text-slate-600 dark:text-slate-300 sm:text-lg">

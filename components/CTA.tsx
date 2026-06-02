@@ -16,7 +16,7 @@ export function CTA() {
           </div>
 
           <div className="relative">
-            <h2 className="mx-auto max-w-2xl font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mx-auto max-w-2xl font-display text-[clamp(1.5rem,7vw,1.875rem)] font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
               Start turning data into decisions today
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base text-white/85 sm:text-lg">

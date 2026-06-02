@@ -52,7 +52,7 @@ export function Testimonials() {
           <span className="eyebrow">Testimonials</span>
           <h2
             id="testimonials-heading"
-            className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl"
+            className="mt-4 font-display text-[clamp(1.5rem,7vw,1.875rem)] font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl"
           >
             Loved by data-driven teams
           </h2>

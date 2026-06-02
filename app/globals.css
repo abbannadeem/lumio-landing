@@ -28,6 +28,14 @@
   /* Prevent any single long word/string from blowing out the layout on mobile. */
   h1, h2, h3, h4, h5, h6, p {
     overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Flex/grid children default to min-width:auto (= intrinsic content size),
+     which lets a wide child push its parent past the viewport. Reset to 0
+     so containers are bounded by their parent, not their content. */
+  *, *::before, *::after {
+    min-width: 0;
   }
 
   /* Respect users who prefer reduced motion. */
