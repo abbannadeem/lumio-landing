@@ -10,11 +10,11 @@ type Testimonial = {
 
 const HEADSHOTS = {
   sarah:
-    "https://source.unsplash.com/featured/320x320?portrait,businesswoman,smiling?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=640&q=80",
   marcus:
-    "https://source.unsplash.com/featured/320x320?portrait,businessman,glasses?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=640&q=80",
   aisha:
-    "https://source.unsplash.com/featured/320x320?portrait,professional,woman,southasian?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=640&q=80",
 } as const;
 
 const heroQuote = {

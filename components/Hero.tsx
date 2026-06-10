@@ -99,9 +99,8 @@ export function Hero() {
               />
               <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-brand-800/10 bg-cream-100 shadow-soft dark:border-cream-100/10 dark:bg-brand-800">
                 <img
-                  src="https://images.unsplash.com/featured/?dataviz,abstract,green&auto=format&fit=crop&w=1200&q=80"
-                  srcSet="https://source.unsplash.com/featured/1400x1600?dataviz,abstract,green&auto=format&fit=crop&w=1200&q=80"
-                  alt="Abstract green data visualization representing Lumio's analytics layer"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                  alt="Analytics dashboard with charts and metrics on a laptop screen"
                   loading="eager"
                   decoding="async"
                   width={1200}

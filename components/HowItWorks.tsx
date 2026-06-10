@@ -21,8 +21,8 @@ const steps: Step[] = [
     description:
       "Warehouses, spreadsheets, ad platforms, CRMs — over 200 integrations in minutes. No engineering tickets, no broken pipelines, no schema arguments.",
     image:
-      "https://images.unsplash.com/featured/800x600?cables,connector,clean,studio&auto=format&fit=crop&w=1200&q=80",
-    alt: "Studio-lit cables and connectors on a clean surface",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    alt: "Circuit board representing integrations and data connectors",
   },
   {
     number: "02",
@@ -32,8 +32,8 @@ const steps: Step[] = [
     description:
       "Our analytics layer continuously models your data, scans for anomalies, and writes the one explanation that makes the number make sense.",
     image:
-      "https://images.unsplash.com/featured/800x600?neural,abstract,green,light&auto=format&fit=crop&w=1200&q=80",
-    alt: "Abstract green neural pattern of light",
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
+    alt: "Abstract neural network visualization",
   },
   {
     number: "03",
@@ -43,8 +43,8 @@ const steps: Step[] = [
     description:
       "A short, prioritized brief lands before standup — insights, anomalies, and recommended next steps your team can act on without digging.",
     image:
-      "https://images.unsplash.com/featured/800x600?notebook,desk,morning,workspace&auto=format&fit=crop&w=1200&q=80",
-    alt: "Notebook and pen on a desk in morning light",
+      "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1200&q=80",
+    alt: "Open notebook on a desk in soft morning light",
   },
 ];
 

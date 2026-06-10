@@ -58,11 +58,11 @@ const securityFeature: Feature = {
 };
 
 const IMG_DATAVIZ =
-  "https://images.unsplash.com/featured/?chart,analytics,screen&auto=format&fit=crop&w=1200&q=80";
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80";
 const IMG_TEAM =
-  "https://images.unsplash.com/featured/?team,meeting,laptop,office&auto=format&fit=crop&w=1200&q=80";
+  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80";
 const IMG_SECURITY =
-  "https://images.unsplash.com/featured/?vault,architecture,minimal,security&auto=format&fit=crop&w=1200&q=80";
+  "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80";
 
 function FeatureIcon({ Icon }: { Icon: LucideIcon }) {
   return (

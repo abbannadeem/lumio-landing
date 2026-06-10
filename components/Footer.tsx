@@ -58,21 +58,15 @@ const socials = [
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-brand-800 text-cream-200 dark:bg-brand-900">
-      {/* Marble texture wash */}
+      {/* Subtle texture wash via gradient (replaces broken Unsplash featured query) */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-[0.08] mix-blend-screen"
-      >
-        <img
-          src="https://images.unsplash.com/featured/1600x400?marble,texture,cream?auto=format&fit=crop&w=1200&q=80"
-          alt=""
-          loading="lazy"
-          decoding="async"
-          width={1600}
-          height={400}
-          className="h-full w-full object-cover"
-        />
-      </div>
+        style={{
+          backgroundImage:
+            "radial-gradient(at 20% 30%, rgba(245,237,216,0.4) 0px, transparent 50%), radial-gradient(at 80% 70%, rgba(212,162,76,0.3) 0px, transparent 50%)",
+        }}
+      />
 
       {/* Ochre kiss */}
       <div
