@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Play, Sparkles, ArrowRight } from "lucide-react";
+import { DashboardMockup } from "@/components/DashboardMockup";
 
 export function Hero() {
   const reduceMotion = useReducedMotion();
@@ -92,25 +93,15 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             className="order-1 lg:order-2 lg:col-span-5"
           >
-            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
+              {/* Ochre offset accent — editorial print feel */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 translate-x-2 translate-y-2 rounded-sm bg-accent-400 sm:translate-x-3 sm:translate-y-3 lg:translate-x-[12px] lg:translate-y-[12px]"
               />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-brand-800/10 bg-cream-100 shadow-soft dark:border-cream-100/10 dark:bg-brand-800">
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-                  alt="Analytics dashboard with charts and metrics on a laptop screen"
-                  loading="eager"
-                  decoding="async"
-                  width={1200}
-                  height={1500}
-                  className="h-full w-full object-cover"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 bg-brand-800/15 mix-blend-multiply"
-                />
+              {/* Branded dashboard mockup — fully responsive, no external image */}
+              <div className="relative">
+                <DashboardMockup />
               </div>
             </div>
           </motion.div>
