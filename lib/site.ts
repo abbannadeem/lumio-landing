@@ -5,9 +5,9 @@
  */
 export const siteConfig = {
   name: "Lumio",
-  tagline: "Turn raw data into decisions — automatically",
+  tagline: "The analytics layer modern operators run on",
   description:
-    "Lumio is an AI-powered analytics platform that turns raw business data into clear, automated decisions. Real-time dashboards, AI insights, and automated reports for modern teams.",
+    "Lumio connects every tool your team already uses, then writes the one weekly memo your leadership actually reads — insights, anomalies, and next steps, no dashboard digging required.",
   url: "https://lumio-landing.pages.dev",
   ogImage: "https://lumio-landing.pages.dev/og.png",
   email: "hello@lumio.ai",

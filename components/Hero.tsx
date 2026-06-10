@@ -2,7 +2,6 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Play, Sparkles, ArrowRight } from "lucide-react";
-import { DashboardMockup } from "@/components/DashboardMockup";
 
 export function Hero() {
   const reduceMotion = useReducedMotion();
@@ -22,86 +21,101 @@ export function Hero() {
       className="relative overflow-hidden pt-28 sm:pt-32"
       aria-labelledby="hero-heading"
     >
-      {/* Soft gradient backdrop */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
-      >
-        <div className="absolute left-1/2 top-0 h-[520px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-brand-200/40 via-accent-400/20 to-transparent blur-3xl dark:from-brand-500/25 dark:via-accent-500/15" />
-        <div
-          className="absolute inset-0 opacity-[0.4]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, rgb(99 102 241 / 0.08) 1px, transparent 0)",
-            backgroundSize: "32px 32px",
-          }}
-        />
-      </div>
-
-      <div className="container-page flex flex-col items-center gap-12 pb-16 lg:gap-16 lg:pb-24">
-        {/* Copy — always centered */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          className="mx-auto max-w-3xl text-center"
-        >
-          <motion.div variants={item} className="flex justify-center">
-            <span className="eyebrow">
-              <Sparkles size={13} />
-              AI-powered analytics
-            </span>
-          </motion.div>
-
-          <motion.h1
-            variants={item}
-            id="hero-heading"
-            className="mt-5 break-words font-display text-[clamp(1.75rem,8vw,2.25rem)] font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl"
-          >
-            Turn raw data into{" "}
-            <span className="text-gradient">decisions</span> — automatically
-          </motion.h1>
-
-          <motion.p
-            variants={item}
-            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg"
-          >
-            Lumio connects your business data, surfaces AI-driven insights, and
-            delivers automated reports — so your team spends less time digging
-            through dashboards and more time making the right call.
-          </motion.p>
-
+      <div className="container-page pb-16 lg:pb-24">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          {/* Copy — left column on desktop, second on mobile (image first) */}
           <motion.div
-            variants={item}
-            className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className="order-2 lg:order-1 lg:col-span-7"
           >
-            <a href="#cta" className="btn-primary w-full sm:w-auto">
-              Start free trial
-              <ArrowRight size={16} />
-            </a>
-            <a href="#how-it-works" className="btn-secondary w-full sm:w-auto">
-              <Play size={15} />
-              Watch demo
-            </a>
+            <motion.div variants={item} className="flex">
+              <span className="eyebrow">
+                <Sparkles size={13} aria-hidden="true" />
+                The operator&rsquo;s analytics layer
+              </span>
+            </motion.div>
+
+            <motion.h1
+              variants={item}
+              id="hero-heading"
+              className="mt-6 break-words font-display text-[clamp(2rem,8vw,2.5rem)] font-medium leading-[1.05] tracking-tighter text-brand-800 dark:text-cream-50 sm:text-5xl lg:text-[clamp(3rem,5.5vw,4.5rem)]"
+            >
+              Stop reporting on the business. Start{" "}
+              <em className="font-display italic text-accent-500 dark:text-accent-300">
+                running
+              </em>{" "}
+              it.
+            </motion.h1>
+
+            <motion.p
+              variants={item}
+              className="mt-6 max-w-xl text-base leading-relaxed text-brand-700/90 dark:text-cream-200/80 sm:text-lg"
+            >
+              Lumio is the analytics layer modern operators trust to surface the
+              one decision that matters this week &mdash; pulled from every tool
+              you already use, explained in a sentence, ready before your Monday
+              standup.
+            </motion.p>
+
+            <motion.div
+              variants={item}
+              className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center"
+            >
+              <a href="#cta" className="btn-primary w-full sm:w-auto">
+                See your first insight in 4 minutes
+                <ArrowRight size={16} aria-hidden="true" />
+              </a>
+              <a
+                href="#how-it-works"
+                className="btn-secondary w-full sm:w-auto"
+              >
+                <Play size={15} aria-hidden="true" />
+                Watch a 90-second tour
+              </a>
+            </motion.div>
+
+            <motion.p
+              variants={item}
+              className="mt-5 text-xs text-brand-600/70 dark:text-cream-300/60"
+            >
+              No credit card required &middot; 14-day free trial &middot; Cancel
+              anytime
+            </motion.p>
           </motion.div>
 
-          <motion.p
-            variants={item}
-            className="mt-5 text-xs text-slate-400 dark:text-slate-500"
+          {/* Editorial image — right column on desktop, first on mobile */}
+          <motion.div
+            initial={{ opacity: 0, y: reduceMotion ? 0 : 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+            className="order-1 lg:order-2 lg:col-span-5"
           >
-            No credit card required · 14-day free trial · Cancel anytime
-          </motion.p>
-        </motion.div>
-
-        {/* Visual — centered below the copy */}
-        <motion.div
-          initial={{ opacity: 0, y: reduceMotion ? 0 : 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="relative w-full max-w-5xl"
-        >
-          <DashboardMockup />
-        </motion.div>
+            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 translate-x-2 translate-y-2 rounded-sm bg-accent-400 sm:translate-x-3 sm:translate-y-3 lg:translate-x-[12px] lg:translate-y-[12px]"
+              />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-brand-800/10 bg-cream-100 shadow-soft dark:border-cream-100/10 dark:bg-brand-800">
+                <img
+                  src="https://images.unsplash.com/featured/?dataviz,abstract,green&auto=format&fit=crop&w=1200&q=80"
+                  srcSet="https://source.unsplash.com/featured/1400x1600?dataviz,abstract,green&auto=format&fit=crop&w=1200&q=80"
+                  alt="Abstract green data visualization representing Lumio's analytics layer"
+                  loading="eager"
+                  decoding="async"
+                  width={1200}
+                  height={1500}
+                  className="h-full w-full object-cover"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-brand-800/15 mix-blend-multiply"
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

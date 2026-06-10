@@ -27,7 +27,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label="Toggle dark mode"
       title="Toggle dark mode"
-      className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-600 transition-colors hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-brand-800 transition-colors hover:bg-brand-800/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50 dark:text-cream-100 dark:hover:bg-cream-100/10 dark:focus-visible:ring-offset-brand-900"
     >
       <Sun size={19} className="hidden dark:block" aria-hidden="true" />
       <Moon size={19} className="block dark:hidden" aria-hidden="true" />

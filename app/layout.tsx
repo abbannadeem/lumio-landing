@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -10,15 +10,16 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const sora = Sora({
+const fraunces = Fraunces({
   subsets: ["latin"],
   display: "swap",
-  weight: ["600", "700", "800"],
-  variable: "--font-sora",
+  style: ["normal", "italic"],
+  axes: ["SOFT", "opsz"],
+  variable: "--font-fraunces",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#4f46e5",
+  themeColor: "#0E3B2E",
   width: "device-width",
   initialScale: 1,
 };
@@ -144,7 +145,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${sora.variable}`}
+      className={`${inter.variable} ${fraunces.variable}`}
       // The theme script mutates the class before hydration → silence the mismatch.
       suppressHydrationWarning
     >

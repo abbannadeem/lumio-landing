@@ -1,4 +1,3 @@
-import { Star } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 type Testimonial = {
@@ -6,29 +5,35 @@ type Testimonial = {
   name: string;
   role: string;
   company: string;
-  initials: string;
-  /** Tailwind gradient classes for the avatar circle. */
-  avatar: string;
+  image: string;
+};
+
+const HEADSHOTS = {
+  sarah:
+    "https://source.unsplash.com/featured/320x320?portrait,businesswoman,smiling?auto=format&fit=crop&w=1200&q=80",
+  marcus:
+    "https://source.unsplash.com/featured/320x320?portrait,businessman,glasses?auto=format&fit=crop&w=1200&q=80",
+  aisha:
+    "https://source.unsplash.com/featured/320x320?portrait,professional,woman,southasian?auto=format&fit=crop&w=1200&q=80",
+} as const;
+
+const heroQuote = {
+  quote:
+    "Lumio replaced three separate tools and a weekly reporting meeting. The one memo it writes every Monday is the only thing my leadership actually reads.",
+  name: "Sarah Chen",
+  role: "VP of Growth",
+  company: "Nordwave",
+  image: HEADSHOTS.sarah,
 };
 
 const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Lumio replaced three separate tools and a weekly reporting meeting. The AI insights catch things our analysts used to miss entirely.",
-    name: "Sarah Chen",
-    role: "VP of Growth",
-    company: "Nordwave",
-    initials: "SC",
-    avatar: "from-indigo-500 to-violet-500",
-  },
   {
     quote:
       "We went from gut-feel decisions to data-backed ones in a week. Onboarding was genuinely the easiest of any platform we've adopted.",
     name: "Marcus Reyes",
     role: "Head of Operations",
     company: "Quanta",
-    initials: "MR",
-    avatar: "from-violet-500 to-fuchsia-500",
+    image: HEADSHOTS.marcus,
   },
   {
     quote:
@@ -36,8 +41,15 @@ const testimonials: Testimonial[] = [
     name: "Aisha Patel",
     role: "Director of Analytics",
     company: "Brightfold",
-    initials: "AP",
-    avatar: "from-blue-500 to-indigo-500",
+    image: HEADSHOTS.aisha,
+  },
+  {
+    quote:
+      "It surfaces the one decision that matters this week — pulled from every tool we already use. I stopped digging through dashboards entirely.",
+    name: "Sarah Chen",
+    role: "VP of Growth",
+    company: "Nordwave",
+    image: HEADSHOTS.sarah,
   },
 ];
 
@@ -45,52 +57,121 @@ export function Testimonials() {
   return (
     <section
       aria-labelledby="testimonials-heading"
-      className="bg-slate-50 py-20 dark:bg-slate-900 sm:py-28"
+      className="bg-cream-50 py-20 dark:bg-brand-900 sm:py-28"
     >
       <div className="container-page">
-        <Reveal className="mx-auto max-w-2xl text-center">
+        <Reveal className="max-w-2xl">
           <span className="eyebrow">Testimonials</span>
           <h2
             id="testimonials-heading"
-            className="mt-4 font-display text-[clamp(1.5rem,7vw,1.875rem)] font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl"
+            className="mt-4 font-display text-[clamp(1.5rem,7vw,1.875rem)] font-medium tracking-tighter text-brand-800 dark:text-cream-50 sm:text-4xl"
           >
-            Loved by data-driven teams
+            What operators are <em className="italic text-accent-500">saying</em>.
           </h2>
-          <p className="mt-4 text-base text-slate-600 dark:text-slate-300 sm:text-lg">
-            Thousands of teams use Lumio to make faster, smarter decisions every
-            day.
-          </p>
         </Reveal>
 
-        <ul className="mt-14 grid gap-6 md:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <Reveal as="li" key={t.name} delay={i * 0.08}>
-              <figure className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-card dark:border-slate-800 dark:bg-slate-800">
-                <div className="flex gap-0.5" aria-label="Rated 5 out of 5 stars">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <Star
-                      key={s}
-                      size={16}
-                      className="fill-amber-400 text-amber-400"
-                      aria-hidden="true"
-                    />
-                  ))}
+        {/* Hero editorial pull-quote */}
+        <Reveal className="mt-12 sm:mt-16">
+          <figure className="relative border-t border-brand-800/10 pt-10 dark:border-cream-100/10 sm:pt-14 lg:pt-16">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -left-2 -top-2 select-none font-display text-[6rem] leading-none text-accent-400 sm:-left-4 sm:-top-6 sm:text-[8rem] lg:-left-8 lg:-top-8"
+            >
+              &ldquo;
+            </span>
+
+            <div className="lg:grid lg:grid-cols-12 lg:gap-12">
+              <blockquote className="lg:col-span-9">
+                <p
+                  className="font-display font-medium italic tracking-tighter text-brand-800 dark:text-cream-50"
+                  style={{ fontSize: "clamp(2rem, 6vw, 4.5rem)", lineHeight: 1.1 }}
+                >
+                  {heroQuote.quote}
+                </p>
+              </blockquote>
+
+              <div className="mt-10 flex items-center gap-4 lg:col-span-3 lg:mt-0 lg:block lg:self-end">
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border border-brand-800/10 shadow-card after:absolute after:inset-0 after:bg-brand-800/15 after:mix-blend-multiply dark:border-cream-100/10 sm:h-24 sm:w-24 lg:h-[180px] lg:w-[180px]">
+                  <img
+                    src={heroQuote.image}
+                    alt={`${heroQuote.name}, ${heroQuote.role} at ${heroQuote.company}`}
+                    loading="lazy"
+                    decoding="async"
+                    width={320}
+                    height={320}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-                <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
-                  “{t.quote}”
-                </blockquote>
-                <figcaption className="mt-6 flex items-center gap-3">
-                  <span
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${t.avatar} text-sm font-bold text-white`}
-                    aria-hidden="true"
-                  >
-                    {t.initials}
+                <figcaption className="lg:mt-5">
+                  <span className="block font-display text-base font-medium text-brand-800 dark:text-cream-50 lg:text-lg">
+                    {heroQuote.name}
                   </span>
+                  <span className="mt-1 block text-sm text-brand-600 dark:text-cream-200/70">
+                    {heroQuote.role}
+                  </span>
+                  <span className="block text-sm text-brand-600 dark:text-cream-200/70">
+                    {heroQuote.company}
+                  </span>
+                </figcaption>
+              </div>
+            </div>
+
+            {/* Inline stat strip */}
+            <dl className="mt-14 grid grid-cols-1 gap-8 border-t border-brand-800/10 pt-10 dark:border-cream-100/10 sm:grid-cols-3 sm:gap-6">
+              {[
+                { value: "10h", label: "saved per week, per team" },
+                { value: "4.9", label: "average G2 rating" },
+                { value: "200+", label: "native integrations" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <dt className="font-display text-5xl font-semibold tabular-nums tracking-tighter text-accent-500 sm:text-6xl">
+                    {stat.value}
+                  </dt>
+                  <dd className="mt-2 text-sm text-brand-600 dark:text-cream-200/70">
+                    {stat.label}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </figure>
+        </Reveal>
+
+        {/* Supporting 3-up grid */}
+        <ul className="mt-20 grid gap-px overflow-hidden border border-brand-800/10 bg-brand-800/10 dark:border-cream-100/10 dark:bg-cream-100/10 md:grid-cols-3">
+          {testimonials.map((t, i) => (
+            <Reveal
+              as="li"
+              key={`${t.name}-${i}`}
+              delay={i * 0.08}
+              className="bg-cream-50 dark:bg-brand-900"
+            >
+              <figure className="flex h-full flex-col p-7 sm:p-8">
+                <blockquote className="flex-1 text-base leading-relaxed text-brand-700 dark:text-cream-100/90">
+                  <span aria-hidden="true" className="text-accent-500">
+                    &ldquo;
+                  </span>
+                  {t.quote}
+                  <span aria-hidden="true" className="text-accent-500">
+                    &rdquo;
+                  </span>
+                </blockquote>
+                <figcaption className="mt-8 flex items-center gap-4">
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-brand-800/10 after:absolute after:inset-0 after:bg-brand-800/15 after:mix-blend-multiply dark:border-cream-100/10">
+                    <img
+                      src={t.image}
+                      alt={`${t.name}, ${t.role} at ${t.company}`}
+                      loading="lazy"
+                      decoding="async"
+                      width={96}
+                      height={96}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                   <span>
-                    <span className="block text-sm font-semibold text-slate-900 dark:text-white">
+                    <span className="block font-display text-sm font-medium text-brand-800 dark:text-cream-50">
                       {t.name}
                     </span>
-                    <span className="block text-xs text-slate-500 dark:text-slate-400">
+                    <span className="block text-xs text-brand-600 dark:text-cream-200/70">
                       {t.role}, {t.company}
                     </span>
                   </span>

@@ -20,8 +20,8 @@ export default function OpengraphImage() {
           justifyContent: "space-between",
           padding: "80px",
           background:
-            "linear-gradient(135deg, #4f46e5 0%, #7c3aed 55%, #8b5cf6 100%)",
-          color: "white",
+            "linear-gradient(135deg, #0E3B2E 0%, #16462D 55%, #1F5638 100%)",
+          color: "#F5EDD8",
           fontFamily: "sans-serif",
         }}
       >
@@ -32,7 +32,8 @@ export default function OpengraphImage() {
               width: 64,
               height: 64,
               borderRadius: 18,
-              background: "rgba(255,255,255,0.18)",
+              background: "rgba(212,162,76,0.95)",
+              color: "#0E3B2E",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -61,14 +62,14 @@ export default function OpengraphImage() {
             Turn raw data into decisions — automatically
           </div>
           <div
-            style={{ fontSize: 32, color: "rgba(255,255,255,0.85)", maxWidth: 900 }}
+            style={{ fontSize: 32, color: "rgba(245,237,216,0.85)", maxWidth: 900 }}
           >
             AI-powered analytics for teams that decide with data.
           </div>
         </div>
 
         {/* Footer URL */}
-        <div style={{ fontSize: 28, color: "rgba(255,255,255,0.8)" }}>
+        <div style={{ fontSize: 28, color: "rgba(245,237,216,0.8)" }}>
           lumio-landing.pages.dev
         </div>
       </div>

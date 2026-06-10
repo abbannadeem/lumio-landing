@@ -9,39 +9,63 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Single accent theme: indigo → violet.
+        // Primary brand — deep forest. Used for type, surfaces, and dark mode canvas.
         brand: {
-          50: "#eef2ff",
-          100: "#e0e7ff",
-          200: "#c7d2fe",
-          300: "#a5b4fc",
-          400: "#818cf8",
-          500: "#6366f1",
-          600: "#4f46e5",
-          700: "#4338ca",
-          800: "#3730a3",
-          900: "#312e81",
+          50: "#F1F6F3",
+          100: "#DCE8E0",
+          200: "#B6D0BD",
+          300: "#86B193",
+          400: "#558E6A",
+          500: "#2F6E48",
+          600: "#1F5638",
+          700: "#16462D",
+          800: "#0E3B2E", // signature forest
+          900: "#0A2A21",
         },
+        // Signature accent — ochre / amber-gold. CTAs, highlights, data viz.
         accent: {
-          400: "#a78bfa",
-          500: "#8b5cf6",
-          600: "#7c3aed",
+          50: "#FBF6EA",
+          100: "#F6EAC8",
+          200: "#EFD493",
+          300: "#E5BB68",
+          400: "#D4A24C", // signature ochre
+          500: "#B9853A",
+          600: "#956A2D",
+          700: "#735224",
+          800: "#553D1B",
+          900: "#3B2A13",
+        },
+        // Warm neutral — replaces cold slate. Used for body bg, cards.
+        cream: {
+          50: "#FBF8F1",
+          100: "#F5EDD8", // signature cream
+          200: "#EBE0C2",
+          300: "#DDD0AC",
+          400: "#C7B98F",
+          500: "#A89A73",
+          600: "#857857",
+          700: "#615640",
+          800: "#3F3829",
+          900: "#211D15",
         },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-sora)", "var(--font-inter)", "sans-serif"],
+        display: ["var(--font-fraunces)", "ui-serif", "Georgia", "serif"],
       },
       backgroundImage: {
+        // Editorial gradient — forest deepening, with a warm ochre kiss at the bottom right.
         "brand-gradient":
-          "linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #8b5cf6 100%)",
+          "radial-gradient(120% 80% at 85% 100%, rgba(212,162,76,0.35) 0%, rgba(14,59,46,0) 45%), linear-gradient(135deg, #0E3B2E 0%, #16462D 55%, #1F5638 100%)",
         "brand-gradient-soft":
-          "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
+          "linear-gradient(135deg, #F5EDD8 0%, #F1F6F3 100%)",
+        "accent-gradient":
+          "linear-gradient(135deg, #D4A24C 0%, #B9853A 100%)",
       },
       boxShadow: {
-        soft: "0 4px 24px -8px rgba(79, 70, 229, 0.15)",
-        glow: "0 0 40px -8px rgba(124, 58, 237, 0.35)",
-        card: "0 1px 3px rgba(15, 23, 42, 0.06), 0 8px 24px -12px rgba(15, 23, 42, 0.12)",
+        soft: "0 4px 24px -8px rgba(14, 59, 46, 0.18)",
+        glow: "0 0 50px -10px rgba(212, 162, 76, 0.45)",
+        card: "0 1px 2px rgba(14, 59, 46, 0.05), 0 10px 30px -16px rgba(14, 59, 46, 0.18)",
       },
       keyframes: {
         "fade-up": {

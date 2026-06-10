@@ -39,14 +39,14 @@ export function Logo({ variant = "default", className = "" }: LogoProps) {
             y2="28"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#4f46e5" />
-            <stop offset="1" stopColor="#8b5cf6" />
+            <stop stopColor="#0E3B2E" />
+            <stop offset="1" stopColor="#D4A24C" />
           </linearGradient>
         </defs>
       </svg>
       <span
-        className={`font-display text-xl font-extrabold tracking-tight ${
-          variant === "light" ? "text-white" : "text-slate-900 dark:text-white"
+        className={`font-display text-xl font-medium tracking-tighter ${
+          variant === "light" ? "text-cream-50" : "text-brand-800 dark:text-cream-100"
         }`}
       >
         {siteConfig.name}
